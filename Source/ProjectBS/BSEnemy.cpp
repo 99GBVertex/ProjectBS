@@ -2,4 +2,14 @@
 
 
 #include "BSEnemy.h"
+#include "AI/BSAIController.h"
 
+void ABSEnemy::BeginPlay()
+{
+    Super::BeginPlay();
+    
+    if(CharacterBT)
+    {
+        GetAIController()->RunBehaviorTree(CharacterBT);
+    }
+}

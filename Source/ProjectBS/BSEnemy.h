@@ -13,5 +13,9 @@ UCLASS()
 class PROJECTBS_API ABSEnemy : public ABSAICharacter
 {
 	GENERATED_BODY()
-	
+
+protected:
+	//~ Begin Actor Interface
+	virtual void BeginPlay() override;
+	//~ End Actor Interface
 };
